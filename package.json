@@ -8,5 +8,10 @@
    "author": "kamrankaza@gmail.com",
    "scripts": {
       "start": "node index.js"
-   }
+   },
+  "dependencies": {
+    "express" : "^4.16.4",
+    "jquery": "^3.3.1",
+    "bootstrap": "^4.2.1"
+  }
 }
