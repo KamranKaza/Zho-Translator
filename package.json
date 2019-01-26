@@ -6,8 +6,9 @@
     "npm" :  "6.5"
    },
    "author": "kamrankaza@gmail.com",
+  "main": "server.js",
    "scripts": {
-      "start": "node index.js"
+      "start": "node server.js"
    },
   "dependencies": {
     "express" : "^4.16.4",
