@@ -1,0 +1,11 @@
+{
+  "name": "Zho-Translator",
+  "version": "1.0.0",
+  "dependencies": {
+    "private": true,
+    "author": "Kamran",
+    "scripts": {
+      "start": "node index.js"
+    }
+  }
+}

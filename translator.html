@@ -1,0 +1,261 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css">
+    <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.js"></script>
+    <script type="application/javascript">
+    translate = function(english) {
+
+        var translation = '';
+        var englisharray = english.split('');
+        for (var i = 0; i < englisharray.length; i++) {
+            var englishletter = englisharray[i];
+            var translatedletters = '';
+            switch (englishletter) {
+                case "A":
+                case "a":
+                    translatedletters = "ha";
+                    break;
+                case "B":
+                case "b":
+                    translatedletters = "he";
+                    break;
+                case "C":
+                case "c":
+                    translatedletters = "hi";
+                    break;
+                case "D":
+                case "d":
+                    translatedletters = "ho";
+                    break;
+                case "E":
+                case "e":
+                    translatedletters = "hu";
+                    break;
+                case "F":
+                case "f":
+                    translatedletters = "hy";
+                    break;
+                case "G":
+                case "g":
+                    translatedletters = "la";
+                    break;
+                case "H":
+                case "h":
+                    translatedletters = "le";
+                    break;
+                case "I":
+                case "i":
+                    translatedletters = "li";
+                    break;
+                case "J":
+                case "j":
+                    translatedletters = "lo";
+                    break;
+                case "K":
+                case "k":
+                    translatedletters = "lu";
+                    break;
+                case "L":
+                case "l":
+                    translatedletters = "ly";
+                    break;
+                case "M":
+                case "m":
+                    translatedletters = "ga";
+                    break;
+                case "N":
+                case "n":
+                    translatedletters = "ge";
+                    break;
+                case "O":
+                case "o":
+                    translatedletters = "gi";
+                    break;
+                case "P":
+                case "p":
+                    translatedletters = "go";
+                    break;
+                case "Q":
+                case "q":
+                    translatedletters = "gu";
+                    break;
+                case "R":
+                case "r":
+                    translatedletters = "gy";
+                    break;
+                case "S":
+                case "s":
+                    translatedletters = "ra";
+                    break;
+                case "T":
+                case "t":
+                    translatedletters = "re";
+                    break;
+                case "U":
+                case "u":
+                    translatedletters = "ri";
+                    break;
+                case "V":
+                case "v":
+                    translatedletters = "ro";
+                    break;
+                case "W":
+                case "w":
+                    translatedletters = "ru";
+                    break;
+                case "X":
+                case "x":
+                    translatedletters = "ry";
+                    break;
+                case "Y":
+                case "y":
+                    translatedletters = "sa";
+                    break;
+                case "Z":
+                case "z":
+                    translatedletters = "se";
+                    break;
+                default:
+                    console.log("didn't translate this letter ");
+                    translatedletters = englishletter;
+                    break;
+            }
+            console.log("changed " + englishletter + " into " + translatedletters);
+            // but i didn't add the new letters to the translation yet
+            translation = translation + translatedletters;
+        }
+    return translation;
+    };
+    reversetranslate = function(zho) {
+        var englishtranslation = '';
+        var zhoarray = zho.split('');
+        for (var i = 0; i < zhoarray.length;i=i+2) {
+            var zholetter = zhoarray[i];
+            var translatedletters = '';
+            switch (zholetter) {
+                case "ha":
+                    translatedletters = "a";
+                    break;
+                case "he":
+                    translatedletters = "b";
+                    break;
+                case "hi":
+                    translatedletters = "c";
+                    break;
+                case "ho":
+                    translatedletters = "d";
+                    break;
+                case "hu":
+                    translatedletters = "e";
+                    break;
+                case "hy":
+                    translatedletters = "a";
+                    break;
+                case "ha":
+                    translatedletters = "a";
+                    break;
+                case "ha":
+                    translatedletters = "a";
+                    break;
+                case "ha":
+                    translatedletters = "a";
+                    break;
+                case "ha":
+                    translatedletters = "a";
+                    break;
+                case "ha":
+                    translatedletters = "a";
+                    break;
+                case "ha":
+                    translatedletters = "a";
+                    break;
+                case "ha":
+                    translatedletters = "a";
+                    break;
+                case "ha":
+                    translatedletters = "a";
+                    break;
+                case "ha":
+                    translatedletters = "a";
+                    break;
+                case "ha":
+                    translatedletters = "a";
+                    break;
+                case "ha":
+                    translatedletters = "a";
+                    break;
+                case "ha":
+                    translatedletters = "a";
+                    break;
+                case "ha":
+                    translatedletters = "a";
+                    break;
+                case "ha":
+                    translatedletters = "a";
+                    break;
+                case "ha":
+                    translatedletters = "a";
+                    break;
+                case "ha":
+                    translatedletters = "a";
+                    break;
+                case "ha":
+                    translatedletters = "a";
+                    break;
+                case "ha":
+                    translatedletters = "a";
+                    break;
+                case "ha":
+                    translatedletters = "a";
+                    break;
+                case "ha":
+                    translatedletters = "a";
+                    break;
+                default:
+                    console.log("didn't translate this letter ");
+                    translatedletters = zholetter;
+                    break;
+
+
+
+            }
+        }
+    };
+    </script>
+
+</head>
+<body class = "text-center" style = "background-color:#F6F6F6;">
+<form class = "form-signin" style="max-width:330px;margin:auto;">
+    <h1>Zho Translator!</h1>
+    <button class = "btn btn-lg btn-primary btn-block" id="switchtranslation" type="button">Switch</button><br>
+    <img class="mb-4" src="data:image/jpeg;base64,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" alt="" width="144" height="144"><br>
+    <label for="english"class = "control-label">English Text Here:</label>
+    <textarea class = "form-control" id="english" type="text" name="english" placeholder="English Text"></textarea><br>
+    <button class = "btn btn-lg btn-primary btn-block" id="translate" type="button">Translate</button><br>
+    <label for="translation"class = "control-label">Zho Translation:</label>
+    <textarea class = "form-control" disabled id="translation" name="translation"></textarea>
+</form>
+</body>
+
+
+
+<script type="application/javascript">
+    $( document ).ready(function() {
+        $('#translate').bind('click', function() {
+            var english = $('#english').val();
+            $('#translation').text(translate(english));
+        })
+        $('#english').bind('keyup', function() {
+            var english = $('#english').val();
+            $('#translation').text(translate(english));
+        })
+        $('#switchtranslation').bind('click', function() {
+
+        })
+    });
+
+
+
+</script>
+</html>
