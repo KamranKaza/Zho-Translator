@@ -1,0 +1,52 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="icon" type = "image/x-icon" href="/favicon.ico">
+    <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.js"></script>
+    <script type="application/javascript" src="/js/translator.js"></script>
+</head>
+
+<body class = "text-center" style = "background-color:#F6F6F6;">
+<form class = "form-signin" style="max-width:330px;margin:auto;">
+    <img class="mb-4" src=https://lh3.googleusercontent.com/yTf-tRDjkFhIieJFds26ZVgOiS2nWS_ca-DuK5BoezfB5RHoIT4ndlKczP-PdnmVOqPfjQ=s127><br>
+    <h1>Zho Translator!</h1>
+    <label for="english"class = "control-label">English:</label>
+    <textarea class = "form-control" id="english" type="text" name="english"></textarea><br>
+    <button class = "btn btn-lg btn-primary btn-block" id="switchtranslation" type="button">Switch Translation</button><br>
+    <!--button class = "btn btn-lg btn-primary btn-block" id="translate" type="button">Translate</button><br-->
+    <label for="translation"class = "control-label">Zho:</label>
+    <textarea class = "form-control" disabled id="translation" name="translation"></textarea>
+</form>
+</body>
+
+<script type="application/javascript">
+    var reverse = false;
+    $( document ).ready(function() {
+        $('#translate').bind('click', function() {
+            var english = $('#english').val();
+            $('#translation').text(translate(english));
+        })
+        $('#english').bind('keyup', function() {
+            var english = $('#english').val();
+            $('#translation').val(translate(english));
+        })
+        $('#translation').bind('keyup', function() {
+            var zho = $('#translation').val();
+            $('#english').val(reverseTranslate(zho));
+        })
+        $('#switchtranslation').bind('click', function() {
+            if (reverse) {
+                $('#translation').prop('disabled', true);
+                $('#english').prop('disabled', false);
+                reverse = false;
+            } else {
+                $('#translation').prop('disabled', false);
+                $('#english').prop('disabled', true);
+                reverse = true;
+            }
+        })
+    });
+</script>
+</html>
