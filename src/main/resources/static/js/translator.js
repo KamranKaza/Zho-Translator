@@ -5,118 +5,89 @@ translate = function(english) {
     for (var i = 0; i < englisharray.length; i++) {
         var englishletter = englisharray[i];
         var translatedletters = '';
-        switch (englishletter) {
-            case "A":
+        switch (englishletter.toLowerCase()) {
             case "a":
                 translatedletters = "ha";
                 break;
-            case "B":
             case "b":
                 translatedletters = "he";
                 break;
-            case "C":
             case "c":
                 translatedletters = "hi";
                 break;
-            case "D":
             case "d":
                 translatedletters = "ho";
                 break;
-            case "E":
             case "e":
                 translatedletters = "hu";
                 break;
-            case "F":
             case "f":
                 translatedletters = "hy";
                 break;
-            case "G":
             case "g":
                 translatedletters = "la";
                 break;
-            case "H":
             case "h":
                 translatedletters = "le";
                 break;
-            case "I":
             case "i":
                 translatedletters = "li";
                 break;
-            case "J":
             case "j":
                 translatedletters = "lo";
                 break;
-            case "K":
             case "k":
                 translatedletters = "lu";
                 break;
-            case "L":
             case "l":
                 translatedletters = "ly";
                 break;
-            case "M":
             case "m":
                 translatedletters = "ga";
                 break;
-            case "N":
             case "n":
                 translatedletters = "ge";
                 break;
-            case "O":
             case "o":
                 translatedletters = "gi";
                 break;
-            case "P":
             case "p":
                 translatedletters = "go";
                 break;
-            case "Q":
             case "q":
                 translatedletters = "gu";
                 break;
-            case "R":
             case "r":
                 translatedletters = "gy";
                 break;
-            case "S":
             case "s":
                 translatedletters = "ra";
                 break;
-            case "T":
             case "t":
                 translatedletters = "re";
                 break;
-            case "U":
             case "u":
                 translatedletters = "ri";
                 break;
-            case "V":
             case "v":
                 translatedletters = "ro";
                 break;
-            case "W":
             case "w":
                 translatedletters = "ru";
                 break;
-            case "X":
             case "x":
                 translatedletters = "ry";
                 break;
-            case "Y":
             case "y":
                 translatedletters = "sa";
                 break;
-            case "Z":
             case "z":
                 translatedletters = "se";
                 break;
             default:
-                console.log("didn't translate this letter ");
                 translatedletters = englishletter;
                 break;
         }
-        console.log("changed " + englishletter + " into " + translatedletters);
-        // but i didn't add the new letters to the translation yet
         translation = translation + translatedletters;
     }
     return translation;
@@ -126,9 +97,13 @@ reverseTranslate = function(zho) {
     var englishtranslation = '';
     var zhoarray = zho.split('');
     for (var i = 0; i < zhoarray.length;i=i+2) {
+    	
         var zholetter = zhoarray[i];
         var translatedletters = '';
-        switch (zholetter) {
+        if (zhoarray.length > i+1) {
+        	zholetter = zholetter + zhoarray[i+1];
+        }
+        switch (zholetter.toLowerCase()) {
             case "ha":
                 translatedletters = "a";
                 break;
@@ -145,75 +120,74 @@ reverseTranslate = function(zho) {
                 translatedletters = "e";
                 break;
             case "hy":
-                translatedletters = "a";
+                translatedletters = "f";
                 break;
-            case "ha":
-                translatedletters = "a";
+            case "la":
+                translatedletters = "g";
                 break;
-            case "ha":
-                translatedletters = "a";
+            case "le":
+                translatedletters = "h";
                 break;
-            case "ha":
-                translatedletters = "a";
+            case "li":
+                translatedletters = "i";
                 break;
-            case "ha":
-                translatedletters = "a";
+            case "lo":
+                translatedletters = "j";
                 break;
-            case "ha":
-                translatedletters = "a";
+            case "lu":
+                translatedletters = "k";
                 break;
-            case "ha":
-                translatedletters = "a";
+            case "ly":
+                translatedletters = "l";
                 break;
-            case "ha":
-                translatedletters = "a";
+            case "ga":
+                translatedletters = "m";
                 break;
-            case "ha":
-                translatedletters = "a";
+            case "ge":
+                translatedletters = "n";
                 break;
-            case "ha":
-                translatedletters = "a";
+            case "gi":
+                translatedletters = "o";
                 break;
-            case "ha":
-                translatedletters = "a";
+            case "go":
+                translatedletters = "p";
                 break;
-            case "ha":
-                translatedletters = "a";
+            case "gu":
+                translatedletters = "q";
                 break;
-            case "ha":
-                translatedletters = "a";
+            case "gy":
+                translatedletters = "r";
                 break;
-            case "ha":
-                translatedletters = "a";
+            case "ra":
+                translatedletters = "s";
                 break;
-            case "ha":
-                translatedletters = "a";
+            case "re":
+                translatedletters = "t";
                 break;
-            case "ha":
-                translatedletters = "a";
+            case "ri":
+                translatedletters = "u";
                 break;
-            case "ha":
-                translatedletters = "a";
+            case "ro":
+                translatedletters = "v";
                 break;
-            case "ha":
-                translatedletters = "a";
+            case "ru":
+                translatedletters = "w";
                 break;
-            case "ha":
-                translatedletters = "a";
+            case "ry":
+                translatedletters = "x";
                 break;
-            case "ha":
-                translatedletters = "a";
+            case "sa":
+                translatedletters = "y";
                 break;
-            case "ha":
-                translatedletters = "a";
+            case "se":
+                translatedletters = "z";
                 break;
             default:
-                console.log("didn't translate this letter ");
-                translatedletters = zholetter;
-                break;
-
+                translatedletters = zhoarray[i];
+                i=i-1;
+                break;                
         }
-        //do something with new letters
+        englishtranslation = englishtranslation + translatedletters;
     }
     return englishtranslation;
 };
