@@ -9,44 +9,59 @@
 </head>
 
 <body class = "text-center" style = "background-color:#F6F6F6;">
-<form class = "form-signin" style="max-width:330px;margin:auto;">
-    <img class="mb-4" src=https://lh3.googleusercontent.com/yTf-tRDjkFhIieJFds26ZVgOiS2nWS_ca-DuK5BoezfB5RHoIT4ndlKczP-PdnmVOqPfjQ=s127><br>
+<img class="mb-4" src=https://lh3.googleusercontent.com/yTf-tRDjkFhIieJFds26ZVgOiS2nWS_ca-DuK5BoezfB5RHoIT4ndlKczP-PdnmVOqPfjQ=s127><br>
+
+<div class = "card card-primary" style="max-width:330px;margin:auto;">
+<div class="card-header">
     <h1>Zho Translator!</h1>
+    </div>
+    <div class="card-body">
     <label for="english"class = "control-label">English:</label>
     <textarea class = "form-control" id="english" type="text" name="english"></textarea><br>
-    <button class = "btn btn-lg btn-primary btn-block" id="switchtranslation" type="button">Switch Translation</button><br>
+    <div class="btn-group btn-toggle" id="switchTranslation">
+    <button type="button" class="btn btn-primary active">English to Zho</button>
+    <button type="button" class="btn btn-outline-primary">Zho to English</button>
+    </div><br>
     <!--button class = "btn btn-lg btn-primary btn-block" id="translate" type="button">Translate</button><br-->
     <label for="translation"class = "control-label">Zho:</label>
     <textarea class = "form-control" disabled id="translation" name="translation"></textarea>
-</form>
+	</div>
+</div>
 </body>
 
 <script type="application/javascript">
-    var reverse = false;
-    $( document ).ready(function() {
-        $('#translate').bind('click', function() {
-            var english = $('#english').val();
-            $('#translation').text(translate(english));
-        })
-        $('#english').bind('keyup', function() {
-            var english = $('#english').val();
-            $('#translation').val(translate(english));
-        })
-        $('#translation').bind('keyup', function() {
-            var zho = $('#translation').val();
-            $('#english').val(reverseTranslate(zho));
-        })
-        $('#switchtranslation').bind('click', function() {
-            if (reverse) {
-                $('#translation').prop('disabled', true);
-                $('#english').prop('disabled', false);
-                reverse = false;
-            } else {
-                $('#translation').prop('disabled', false);
-                $('#english').prop('disabled', true);
-                reverse = true;
-            }
-        })
-    });
+
+var reverse = false;
+$( document ).ready(function() {
+    $('#english').bind('keyup', function() {
+        var english = $('#english').val();
+        $('#translation').val(translate(english));
+    })
+    $('#translation').bind('keyup', function() {
+        var zho = $('#translation').val();
+        $('#english').val(reverseTranslate(zho));
+    })
+    $('#switchTranslation').bind('click', function() {
+        $(this).find('.btn').toggleClass('active');
+        
+        if ($(this).find('.btn-primary').length>0) {
+        	$(this).find('.btn').toggleClass('btn-primary');
+        }
+        
+        $(this).find('.btn').toggleClass('btn-outline-primary');
+        
+        
+    	if (reverse) {
+            $('#translation').prop('disabled', true);
+            $('#english').prop('disabled', false);
+            reverse = false;
+        } else {
+            $('#translation').prop('disabled', false);
+            $('#english').prop('disabled', true);
+            reverse = true;
+        }
+    })
+});
+
 </script>
 </html>
